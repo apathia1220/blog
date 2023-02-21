@@ -28,7 +28,7 @@ export const getArticleList = (searchParams: ArticleRequest) => {
 
 export const getArticleById = (articleId: number) => {
   const Header = {
-    Authorization: 'Bearer ' + useUserStore().token
+    Authorization: 'Bearer ' + (useUserStore().token || null)
   }
   return http.get(URLS.ARTICLE_ID + articleId, { headers: Header })
 }
