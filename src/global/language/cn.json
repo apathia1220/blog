@@ -1,0 +1,51 @@
+{
+    "menu": {
+        "home": "首页",
+        "about": "关于",
+        "article": "文章",
+        "talks": "说说",
+        "tags": "标签",
+        "album": "相册",
+        "message": "留言",
+        "comment": "评论",
+        "category": "分类"
+    },
+    "controls": {
+        "login": "登录",
+        "logout":"退出登录",
+        "personal": "个人中心",
+        "language": "中文",
+        "more": "查看更多",
+        "comment": "添加评论",
+        "cancel": "取消"
+    },
+    "login": {
+        "login": "登录",
+        "register": "注册",
+        "haslogin": "已有账号，点击登录",
+        "nologin": "没有账号，点击注册",
+        "nickname": "昵称",
+        "password": "密码",
+        "website": "网址",
+        "desc": "描述",
+        "email": "邮箱",
+        "code": "验证码",
+        "sendCode": "发送验证码",
+        "confirmPd": "确认密码",
+        "submit": "提交",
+        "bind": "绑定",
+        "articleCode": "请输入文章密码"
+    },
+    "about": {
+        "introduction": "个人介绍",
+        "language": "编程语言",
+        "contact": "联系方式"
+    },
+    "settings": {
+        "shared-on": "发布于",
+        "months": ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+        "replay": "回复",
+        "detail": "查看详情",
+        "noMore": "没有更多内容了"
+    }
+}

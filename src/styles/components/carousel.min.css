@@ -1,0 +1,1 @@
+.article-img:after{pointer-events:none;content:'';position:absolute;z-index:35;left:71%;top:0;height:100%;width:50%;background:var(--gradient-cover)}

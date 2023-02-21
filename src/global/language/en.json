@@ -1,0 +1,51 @@
+{
+    "menu": {
+        "home": "HOME",
+        "about": "ABOUT",
+        "article": "ARTICLE",
+        "talks": "TALKS",
+        "tags": "TAGS",
+        "album": "ALBUM",
+        "message": "MESSAGE",
+        "comment": "COMMENT",
+        "category": "CATEGORY"
+    },
+    "controls": {
+        "login": "Login",
+        "logout":"Logout",
+        "personal": "Personal Center",
+        "language": "EngLish",
+        "more": "More",
+        "comment": "Add Comment",
+        "cancel": "Cancel"
+    },
+    "login": {
+        "login": "Login",
+        "register": "Register",
+        "haslogin": "Already have an account, click here to login",
+        "nologin": "Have no account, click here to register",
+        "nickname": "NickName",
+        "password": "PassWord",
+        "website": "Website",
+        "desc": "Description",
+        "email": "Email",
+        "sendCode": "SendCode",
+        "code": "Valid Code",
+        "confirmPd": "Confirm Password",
+        "submit": "Submit",
+        "bind": "Bind",
+        "articleCode": "Please Enter Article Code"
+    },
+    "about": {
+        "introduction": "Introduction",
+        "language": "Programming Language",
+        "contact": "Contact"
+    },
+    "settings": {
+        "shared-on": "shared on",
+        "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        "replay": "Replay",
+        "detail": "View Detail",
+        "noMore": "No More"
+    }
+}
