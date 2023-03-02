@@ -6,21 +6,8 @@
     </div>
     <div class="grid grid-cols-main mb-4">
       <div class="bg-ap-card rounded-xl p-8 text-ap-normal">
-        <div class="relative font-icon-font text-ap-bright text-2xl my-8">
-          <h1>{{ t("about.introduction") }}</h1>
-          <span class="absolute bottom-0 h-1 w-24 rounded-full bg-ap"></span>
-        </div>
-        <p>同济大学 电子信息专业</p>
-        <div class="relative font-icon-font text-ap-bright text-2xl my-8">
-          <h1>{{ t("about.language") }}</h1>
-          <span class="absolute bottom-0 h-1 w-56 rounded-full bg-ap"></span>
-        </div>
-        <p>Python、JavaScript、Go</p>
-        <div class="relative font-icon-font text-ap-bright text-2xl my-8">
-          <h1>{{ t("about.contact") }}</h1>
-          <span class="absolute bottom-0 h-1 w-24 rounded-full bg-ap"></span>
-        </div>
-        <p>e-mail：1343129638@qq.com</p>
+        <div class="article-html relative w-full bg-ap-card text-ap-normal rounded-2xl p-6"
+            v-html="aboutItem"></div>
       </div>
       <div class="-mt-12">
         <Affix>
@@ -35,7 +22,23 @@
 import UseInfo from "../homepage/UseInfo.vue";
 import { Affix } from "@/components/Affix";
 import { useI18n } from "vue-i18n";
+import { getAbout, AboutResponse } from '@/apis/about'
+import { markdownToHtml } from "@/utils";
+import { toast } from "@apathia/apathia.alert";
 
-const { t } = useI18n();
+const { t } = useI18n()
+
+const aboutItem = ref('')
+const getAboutData = async () => {
+  try { 
+    const res: AboutResponse = await getAbout() as AboutResponse
+    aboutItem.value = markdownToHtml(res.data.content)
+  } catch (e: any) {
+    toast.danger(e.message)
+  }
+}
+
+onBeforeMount(() => {
+  getAboutData()
+})
 </script>
-<style lang="scss" scoped></style>

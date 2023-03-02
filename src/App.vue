@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import Header from "./views/header/index.vue";
 import Footer from "./views/footer/index.vue";
-import Welcome from "./views/welcome/index.vue";
-import { useToggle } from "./hooks";
+// import Welcome from "./views/welcome/index.vue";
+// import { useToggle } from "./hooks";
 import { getWebsiteConfig } from "@/apis/config";
 import { toast } from "@apathia/apathia.alert";
 import { useAppStore, AppResponse } from '@/store/app'
 import { getTopAndFeaturedArticles } from '@/apis/articles'
 import { useArticleStore, TopArticleResponse, TopFeatureArticleItem } from '@/store/articles'
 
-const [welcomeState, setWelcomeState] = useToggle();
+// const [welcomeState, setWelcomeState] = useToggle();
 const appStore = useAppStore()
 const articleStore = useArticleStore()
 
@@ -47,8 +47,8 @@ onBeforeMount(() => {
   <div class="ap-login"></div>
   <div class="ap-detail"></div>
   <div class="ap-code"></div>
-  <Welcome v-if="welcomeState" :change-state-fn="setWelcomeState" />
-  <div v-else class="h-full min-w-full min-h-screen bg-ap-bg">
+  <!-- <Welcome v-if="welcomeState" :change-state-fn="setWelcomeState" /> -->
+  <div class="h-full min-w-full min-h-screen bg-ap-bg bg-opacity-50">
     <div class="max-w-10/12 lg:max-w-screen-2xl min-h-content my-0 mx-auto px-8">
       <Header />
       <div class="ap-bgimage"></div>

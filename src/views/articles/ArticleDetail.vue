@@ -58,9 +58,10 @@ import { useI18n } from "vue-i18n";
 import { getArticleById } from '@/apis/articles'
 import { toast } from "@apathia/apathia.alert"
 import { ArticleDetailResponse, ArticleItem } from '@/store/articles'
-import "@/styles/prism-future.css"
+import '@/styles/prism.css'
 import { Comment, AddComment } from '@/components/Comment'
 import { getCommentList, saveComment, CommentReuqest, CommentItem, CommentResponse } from '@/apis/comment'
+import Prism from 'prismjs'
 
 const { t } = useI18n();
 const route = useRoute()
@@ -81,6 +82,9 @@ const getArticleDetail = async () => {
     const res: ArticleDetailResponse = await getArticleById(+id) as ArticleDetailResponse
     articleItem.value = res.data
     articleItem.value.articleContent = markdownToHtml(res.data.articleContent)
+    nextTick(() => {
+      Prism.highlightAll()
+    })
   } catch (e: any) {
     toast.danger(e.message)
   }
@@ -95,9 +99,6 @@ const getComments = async () => {
   }
   try {
     const res: CommentResponse = await getCommentList(params) as CommentResponse
-    // if (res.data.records) {
-    //   comments.value.push(...res.data.records)
-    // }
     comments.value = res.data.records
     page.value.count = res.data.count
   } catch (e: any) {

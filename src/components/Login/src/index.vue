@@ -14,7 +14,7 @@
                             </div>
                             <div class="mx-24 mt-8">
                                 <LoginInput v-model="userForm.username" class="mb-12" :label="t('login.email')" />
-                                <LoginInput v-model="userForm.password" type="password" :label="t('login.password')" />
+                                <LoginInput v-model="userForm.password" type="password" :label="t('login.password')"/>
                             </div>
                             <div @click="handleSubmit('login')"
                                 class="mx-24 p-4 pt-6 mt-12 text-center text-ap-normal text-title-2 bg-ap-trans transition-all duration-300 opacity-70 hover:opacity-100 hover:text-ap-bright rounded-md cursor-pointer">

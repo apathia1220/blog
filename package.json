@@ -22,7 +22,7 @@
     "pinia": "^2.0.28",
     "pinia-plugin-persistedstate": "^3.0.2",
     "postcss": "^8.4.21",
-    "prismjs": "^1.28.0",
+    "prismjs": "^1.29.0",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
     "tailwind-scrollbar": "^2.1.0",

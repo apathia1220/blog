@@ -5,7 +5,7 @@
 }
 
 .theme-light {
-    --background: #fafafa;
+    --background: #f1f3f9;
     --background-card:  #ffffff;
     --background-trans: rgba(0, 0, 0, 0.15);
     --text-bright: #000000;

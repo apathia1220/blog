@@ -8,7 +8,7 @@
             class="grid grid-cols-2 gap-4 bg-ap-card p-8 rounded-xl">
             <div class="rounded-md relative cursor-pointer album-container" v-for="album in albumsData" :key="album.id"
                 @click="goAlbumDetail(album.id)">
-                <img class="h-full w-full rounded-md opacity-30" :src="(album.albumCover as string)">
+                <img class="h-full w-full rounded-md" :src="(album.albumCover as string)">
                 <div class="absolute top-8 left-8 w-full text-title-1 text-ap-normal font-icon-font">
                     <div>{{ album?.albumName }}</div>
                     <div class="album-underline w-0 duration-500 ease-in-out"></div>
@@ -67,7 +67,11 @@ onBeforeMount(async () => {
 
     .album-desc {
         transform: translate(0);
-        opacity: 100;
+        opacity: 1;
+    }
+
+    img {
+        opacity: 0.5;
     }
 }
 </style>

@@ -48,7 +48,7 @@ const page = ref({
   count: 0
 })
 
-const hasMore = computed(() => messageData.value.length < page.value.count)
+const hasMore = computed(() => !!messageData.value && messageData.value.length < page.value.count)
 
 const getMessage = async () => {
   const param: CommentReuqest = {
@@ -88,6 +88,4 @@ onBeforeMount(async () => {
   await getMessage()
 })
 </script>
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
