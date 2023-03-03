@@ -22,8 +22,12 @@ interface ModeProps {
 defineProps<ModeProps>()
 const emit = defineEmits(['toggleTheme'])
 
+const router = useRouter()
+const route  = useRoute()
+
 const handleClick = () => {
     emit('toggleTheme')
+    router.push(route.path)
 }
 </script>
 <style lang='scss' scoped>
