@@ -149,3 +149,17 @@
   transform: translateY(10px);
   opacity: 0;
 }
+
+.carousel-move,
+/* 对移动中的元素应用的过渡 */
+.carousel-enter-active,
+.carousel-leave-active {
+  transition: all 2s ease-in-out;
+}
+
+.carousel-enter-from{
+  transform: translateX(100%);
+}
+.carousel-leave-to {
+  transform: translateX(-100%);
+}

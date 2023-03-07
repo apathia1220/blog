@@ -4,7 +4,7 @@
             <ul class="flex flex-col text-ap-normal font-icon-font justify-center items-center">
                 <li class="mt-2">Copyright © 2022 - {{ currentYear }} {{ app.websiteConfig?.author || 'Apathia' }}
                 </li>
-                <li class="mt-2">备案</li>
+                <a href="https://beian.miit.gov.cn" target="_blank" class="mt-2">{{ app.websiteConfig?.beianNumber }}</a>
             </ul>
         </div>
     </div>
