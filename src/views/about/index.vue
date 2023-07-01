@@ -6,8 +6,7 @@
     </div>
     <div class="grid grid-cols-main mb-4">
       <div class="bg-ap-card rounded-xl p-8 text-ap-normal">
-        <div class="article-html relative w-full bg-ap-card text-ap-normal rounded-2xl p-6"
-            v-html="aboutItem"></div>
+        <div class="article-html relative w-full bg-ap-card text-ap-normal rounded-2xl p-6" v-html="aboutItem"></div>
       </div>
       <div class="-mt-12">
         <Affix>
@@ -30,7 +29,7 @@ const { t } = useI18n()
 
 const aboutItem = ref('')
 const getAboutData = async () => {
-  try { 
+  try {
     const res: AboutResponse = await getAbout() as AboutResponse
     aboutItem.value = markdownToHtml(res.data.content)
   } catch (e: any) {

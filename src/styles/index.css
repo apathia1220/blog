@@ -6,6 +6,7 @@
 
 @import './components/carousel.css';
 @import './components/article.css';
+@import './components/code.css';
 
 @tailwind base;
 @tailwind components;

@@ -4,7 +4,6 @@ import autoImport from 'unplugin-auto-import/vite'
 import path from 'path'
 import viteCompression from 'vite-plugin-compression'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     autoImport({
@@ -32,7 +31,8 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://150.158.91.46:8080',
+        // target: 'http://150.158.91.46:8080',
+        target: 'http://localhost:3000',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }
